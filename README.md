@@ -11,3 +11,5 @@ Then,
 ```
 python3 run.py
 ```
+
+###note: either switch off the neo4j authentication from configuration or add your creditianls in portal/views.py file before running
