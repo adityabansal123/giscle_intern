@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h2>HOME</h2>
+    {% if session.username %}
+        <form action="{{url_for('apply')}}" method="POST">
+            <dl>
+                <dt>Title:</dt>
+                <dd><input type="text" name="title"></dd>
+                <dt>Skills (separated by commas):</dt>
+                <dd><input type="text" name="skills"></dd>
+                <dt>Question:</dt>
+                <dd><textarea name="ques" id="ques" cols="30" rows="10"></textarea></dd>
+            </dl>
+            <button type="submit" value="Send">Send</button>
+        </form>
+    {% endif %}
+    <br>
+    <h3>Positions:</h3>
+    {% include "positions.html" %}
+{% endblock %}

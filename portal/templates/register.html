@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h2>REGISTER</h2>
+    <form action="{{url_for('register')}}" method="post" enctype="multipart/form-data">
+        <dl>
+            <dt>Name:</dt>
+            <dd><input type="text" name="name"></dd>
+            <dt>Username:</dt>
+            <dd><input type="text" name="username"></dd>
+            <dt>Password:</dt>
+            <dd><input type="password" name="password"></dd>
+            <dt>Email:</dt>
+            <dd><input type="text" name="email"></dd>
+            <dt>Contact No:</dt>
+            <dd><input type="text" name="contact"></dd>
+            <dt>LinkedIn Link:</dt>
+            <dd><input type="text" name="linkedin"></dd>
+            <dt>CV:</dt>
+            <dd><input id="file-picker" type="file" name="file"></dd>
+        </dl>
+        <button type="submit" value="Register">Register</button>
+    </form>
+{% endblock %}
