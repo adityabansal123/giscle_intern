@@ -44,9 +44,10 @@ class User:
         skills = [x.strip() for x in skills.lower().split(",")]
         skills = set(skills)
         for skill in skills:
-            graph.merge(details)
-            details["name"] = skill
-            details.push()
+            s = Node("Skill", name = skill)
+            graph.merge(s)
+            rel = Relationship(s, "TAGGED", details)
+            graph.create(rel)
     
 
 
