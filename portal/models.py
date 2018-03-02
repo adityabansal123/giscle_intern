@@ -48,6 +48,17 @@ class User:
             graph.merge(s)
             rel = Relationship(s, "TAGGED", details)
             graph.create(rel)
+            #graph.merge(details)
+            #details["name"] = skill
+            #details.push()
+
+def entries():
+    query = """
+            MATCH (user:User)-[:SENT]->(details:Details)
+            RETURN user.name AS Name, user.username AS UserName, user.email AS Email, user.contact AS Contact, user.linkedin AS Linkedin, details.title AS Position, details.ques AS Answer
+            """
+    r = list(graph.run(query))
+    return r
     
 
 

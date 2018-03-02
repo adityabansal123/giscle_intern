@@ -1,0 +1,15 @@
+{% block body %}
+    {% for i in range(results|length) %}
+    <table>
+        <tr>
+            <td>{{ results[i-1]['Name'] }}</td>
+            <td>{{ results[i-1]['UserName'] }}</td>
+            <td>{{ results[i-1]['Email'] }}</td>
+            <td>{{ results[i-1]['Contact'] }}</td>
+            <td><a href="{{ results[i-1]['Linkedin'] }}">LinkedIn</a></td>
+            <td>{{ results[i-1]['Position'] }}</td>
+            <td>{{ results[i-1]['Answer'] }}</td>
+        </tr>
+    </table>
+    {% endfor %}
+{% endblock %}

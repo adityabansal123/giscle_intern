@@ -1,5 +1,6 @@
 from flask import Flask, request, session, redirect, url_for, render_template, flash, send_from_directory
 from .models import User
+from .models import entries
 import os
 
 app = Flask(__name__)
@@ -67,6 +68,11 @@ def apply():
         user.apply(title, skills, ques)
     
     return redirect(url_for("index"))
+
+@app.route("/admin")
+def admin():
+    results = entries()
+    return render_template("entries.html", results=results)
 
 @app.route("/logout")
 def logout():
