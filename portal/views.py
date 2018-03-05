@@ -7,8 +7,8 @@ app = Flask(__name__)
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-@app.route("/")
-def index():
+@app.route("/jobapply")
+def jobapply():
     return render_template("index.html")
 
 @app.route("/register", methods=["POST", "GET"])
@@ -51,7 +51,7 @@ def login():
         else:
             flash("SUCCESSFULLY LOGGED IN")
             session["username"] = user.username
-            return redirect(url_for("index"))
+            return redirect(url_for("home"))
     return render_template("login.html")
 
 @app.route("/apply", methods=["POST"])
@@ -67,15 +67,43 @@ def apply():
     else:
         user.apply(title, skills, ques)
     
-    return redirect(url_for("index"))
+    return redirect(url_for("internships"))
 
 @app.route("/admin")
 def admin():
     results = entries()
     return render_template("entries.html", results=results)
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/problems")
+def problems():
+    return render_template("problems.html")
+
+@app.route("/internships")
+def internships():
+    return render_template("positions.html")
+
+@app.route("/events")
+def events():
+    return render_template("events.html")
+
+@app.route("/partners")
+def partners():
+    return render_template("partners.html")
+
+@app.route("/university")
+def university():
+    return render_template("university.html")
+
+@app.route("/")
+def home():
+    return render_template("home.html")
+
 @app.route("/logout")
 def logout():
     session.pop("username")
     flash("LOGGED OUT")
-    return redirect(url_for("index"))
+    return redirect(url_for("home"))

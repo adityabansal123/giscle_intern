@@ -1,9 +1,10 @@
 {% extends "layout.html" %}
 
+
 {% block body %}
-    <h2>HOME</h2>
+    
     {% if session.username %}
-        <form action="{{url_for('apply')}}" method="POST">
+        <!-- <form action="{{url_for('apply')}}" method="POST">
             <dl>
                 <dt>Title:</dt>
                 <dd><input type="text" name="title"></dd>
@@ -14,8 +15,58 @@
             </dl>
             <button type="submit" value="Send">Send</button>
         </form>
+    
+    <br> -->
+    
+
+    <br/>
+    <br/>
+    <br/>
+    <div class="col-lg-12 wow fadeIn" data-wow-delay="0.2s">
+    <form action="{{url_for('apply')}}" method="post" enctype="multipart/form-data" style="width:100%;height:40%;padding-left:30%;padding-right:30%;">
+        <p class="h4 text-center mb-4">Apply For Job Role</p>
+    
+        <!-- Material input text -->
+        <div class="md-form">
+            <i class="fa fa-user prefix grey-text"></i>
+            <input type="text" id="materialFormRegisterNameEx" class="form-control" name="title" required>
+            <label for="materialFormRegisterNameEx">Job Title</label>
+        </div>
+
+        <div class="md-form">
+            <i class="fa fa-user prefix grey-text"></i>
+            <input type="text" id="materialFormRegisterNameEx" class="form-control" name="skills" required>
+            <label for="materialFormRegisterNameEx">Skills( Separated By Commas )</label>
+        </div>
+
+        <div class="md-form">
+            <i class="fa fa-user prefix grey-text"></i>
+            <textarea cols="30" rows="10" id="materialFormRegisterNameEx" class="form-control" name="ques" required></textarea>
+            <label for="materialFormRegisterNameEx">Question 1</label>
+        </div>
+    
+        
+        <div class="text-center mt-4">
+            <button class="btn btn-primary" type="submit" value="send">Apply</button>
+        </div>
+    </form>
+    <!-- Material form register -->
+    </div>
+    {% elif not session.username %}
+    <div class="container">
+
+            <!--Page heading-->
+            <div class="row wow fadeIn" data-wow-delay="0.2s">
+                <div class="col-md-12">
+                    <br/>
+                    <br/>
+    <h2 class="h2-responsive">
+            <small class="text-muted" style="font-size:22px;">
+                Please Login in GISCLE then Apply for Job Position
+                </small>
+        </h2>
+                </div></div></div>
     {% endif %}
-    <br>
-    <h3>Positions:</h3>
-    {% include "positions.html" %}
+    <!-- <h3>Positions:</h3> -->
+    
 {% endblock %}

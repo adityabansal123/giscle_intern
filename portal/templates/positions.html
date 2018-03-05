@@ -1,3 +1,649 @@
-<ul>
-    <li>Position1</li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Material Design Bootstrap</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="../static/css/mdb.min.css" rel="stylesheet">
+
+    <link href="../static/css/style.css" rel="stylesheet">
+
+    <!-- Template styles -->
+    <style rel="stylesheet">
+        /* TEMPLATE STYLES */
+
+        main {
+            margin-top: 3rem;
+            ;
+        }
+
+        main .card {
+            margin-bottom: 2rem;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .read-more {
+                text-align: center;
+            }
+        }
+
+        footer.page-footer a {
+            color: #323232;
+        }
+
+        footer.page-footer {
+            background-color: #dfe9f0;
+            margin-top: 2rem;
+            color: black;
+        }
+
+        .navbar .btn-group .dropdown-menu a:hover {
+            color: #000 !important;
+        }
+
+        .navbar .btn-group .dropdown-menu a:active {
+            color: #fff !important;
+        }
+
+        .font-small {
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    {% extends "layout.html" %}
+    {% block body %}
+   
+
+    <main>
+        <!--Main layout-->
+        <div class="container">
+
+            <!--Page heading-->
+            <div class="row wow fadeIn" data-wow-delay="0.2s">
+                <div class="col-md-12">
+                    <h1 class="h1-responsive">
+                        <b>GISCLE</b>
+                        <small class="text-muted">Careers and Internship</small>
+                    </h1>
+                </div>
+            </div>
+            <!--/.Page heading-->
+            <hr>
+            <h2 class="h2-responsive">
+                <small class="text-muted" style="font-size:22px;">
+                    <b style="font-size: 40px;">20</b> interns,
+                    <b style="font-size: 35px;">10</b> weeks,
+                    <b style="font-size: 30px;">5</b> teams,
+                    <b style="font-size: 25px;">1</b> vision and that is to Build and run a Level-3 Self-driving car on the Indian road with 40 KM/H
+                    .
+                    <br/>Are You Up for the Challenge ? Then GISCLE is the Right Fit for You . Have a Look at our Open Positions
+                    </small>
+            </h2>
+            <span>
+                <br/>
+                <strong>
+                    <h3 class="h2-responsive" style="text-align: center;font-size: 40px;color: blueviolet">Open Positions</h3>
+                </strong>
+            </span>
+            <!--First row-->
+            <div class="row mt-5 wow fadeIn" data-wow-delay="0.2s">
+                <!--First column-->
+                <div class="col-lg-4">
+
+                    <!--Card-->
+                    <div class="card hoverable">
+
+                        <!--Card image-->
+                        <img style="width:540px;height:239px;" class="img-fluid" src="../static/img/img/image2.PNG"
+                            alt="Card image cap">
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title dark-grey-text">
+                                <strong>Deep Learning Intern</strong>
+                            </h4>
+                            <h6 class="blue-text font-small font-bold">
+                                <b>Last Date To Apply : </b>
+                                <strong>31/03/2018</strong>
+                            </h6>
+                            <!--Text-->
+                            <h5 clas="card-title dark-grey-text font-bold">
+                                <b>Skills Required : </b>
+                            </h5>
+                            <p class="card-text">Python, C++ ,Knowledge of frameworks such as Tensorflow and Keras will be Added Advantage </p>
+                            <a href="{{url_for('jobapply')}}" class="btn btn-primary btn-md">Apply Now</a>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <!--/.First column-->
+
+                <!--Second column-->
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.2s">
+
+                    <!--Card-->
+                    <div class="card hoverable">
+
+                        <!--Card image-->
+                        <img style="width:540px;height:239px;" class="img-fluid" src="../static/img/img/image1.PNG"
+                            " alt="Card image cap ">
+
+                        <!--Card content-->
+                        <div class="card-body ">
+                            <!--Title-->
+                            <h4 class="card-title dark-grey-text ">
+                                <strong>Computer Vision Intern</strong>
+                            </h4>
+                            <h6 class="blue-text font-small font-bold ">
+                                <b>Last Date To Apply : </b>
+                                <strong>31/03/2018</strong>
+                            </h6>
+                            <!--Text-->
+                            <h5 clas="card-title dark-grey-text font-bold ">
+                                <b>Skills Required : </b>
+                            </h5>
+                            <p class="card-text ">Python, C++ ,Knowledge of frameworks such as Tensorflow and Keras will be Added Advantage </p>
+                            <a href="{{url_for('jobapply')}}" class="btn btn-primary btn-md ">Apply Now</a>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <!--/.Second column-->
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.2s">
+
+                        <!--Card-->
+                        <div class="card hoverable">
+    
+                            <!--Card image-->
+                            <img style="width:540px;height:239px;" class="img-fluid" src="../static/img/img/image4.jpg"
+                                " alt="Card image cap ">
+    
+                            <!--Card content-->
+                            <div class="card-body ">
+                                <!--Title-->
+                                <h4 class="card-title dark-grey-text ">
+                                    <strong>AI with Mathematics Intern</strong>
+                                </h4>
+                                <h6 class="blue-text font-small font-bold ">
+                                    <b>Last Date To Apply : </b>
+                                    <strong>31/03/2018</strong>
+                                </h6>
+                                <!--Text-->
+                                <h5 clas="card-title dark-grey-text font-bold ">
+                                    <b>Skills Required : </b>
+                                </h5>
+                                <p class="card-text ">MSC and equivalent from Applied Mathematics, the ability of converting math into cods</p>
+                                <a href="{{url_for('jobapply')}} " class="btn btn-primary btn-md ">Apply Now</a>
+                            </div>
+    
+                        </div>
+                        <!--/.Card-->
+    
+                    </div>
+            </div>
+            <!--/.First row-->
+
+            <!--Second row-->
+            <div class="row mt-4 wow fadeIn " data-wow-delay="0.2s ">
+                <!--First column-->
+                <div class="col-lg-4 ">
+
+                    <!--Card-->
+                    <div class="card hoverable ">
+
+                        <!--Card image-->
+                        <img style="width:540px;height:239px; " class="img-fluid " src="https://mdbootstrap.com/img/Photos/Slides/img%20(146).jpg
+                            " alt="Card image cap ">
+
+                        <!--Card content-->
+                        <div class="card-body ">
+                            <!--Title-->
+                            <h4 class="card-title dark-grey-text ">
+                                <strong>GIS Developer</strong>
+                            </h4>
+                            <h6 class="blue-text font-small font-bold ">
+                                <b>Last Date To Apply : </b>
+                                <strong>31/03/2018</strong>
+                            </h6>
+                            <!--Text-->
+                            <h5 clas="card-title dark-grey-text font-bold ">
+                                <b>Skills Required : </b>
+                            </h5>
+                            <p class="card-text ">The knowledge about the GIS, map, DGPS, ArgGIS and equivalent mapping software, Python, C++ and basics of Machine Learning and Deep Learning). Responsibility: You will work on a. Plotting the lat and long on map. b. Building the data GPS error dataset after visualising the video. c. Machine Learning models for approximation of GPS error</p>
+                            <a href="{{url_for('jobapply')}} " class="btn btn-primary btn-md ">Apply Now</a>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <!--/.First column-->
+
+                <!--Second column-->
+                <div class="col-lg-4 ">
+
+                    <!--Card-->
+                    <div class="card hoverable ">
+
+                        <!--Card image-->
+                        <img style="width:540px;height:239px; " class="img-fluid " src="https://mdbootstrap.com/img/Photos/Slides/img%20(112).jpg
+                            " alt="Card image cap ">
+
+                        <!--Card content-->
+                        <div class="card-body ">
+                            <!--Title-->
+                            <h4 class="card-title dark-grey-text ">
+                                <strong>Unity Developer</strong>
+                            </h4>
+                            <h6 class="blue-text font-small font-bold ">
+                                <b>Last Date To Apply : </b>
+                                <strong>31/03/2018</strong>
+                            </h6>
+                            <!--Text-->
+                            <h5 clas="card-title dark-grey-text font-bold ">
+                                <b>Skills Required : </b>
+                            </h5>
+                            <p class="card-text ">You should love designing. At least 6 months of experience of Unity 
+                                    development). Responsibility. You will work on a. Creating assets for Giscle VR 
+                            experience. B. Developing the Indian traffic and road scenario in VR </p>
+                            <a href="{{url_for('jobapply')}} " class="btn btn-primary btn-md ">Apply Now</a>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+
+                <!--Second column-->
+                <div class="col-lg-4 ">
+
+                        <!--Card-->
+                        <div class="card hoverable ">
+    
+                            <!--Card image-->
+                            <img style="width:540px;height:239px; " class="img-fluid " src="https://mdbootstrap.com/img/Photos/Slides/img%20(112).jpg
+                                " alt="Card image cap ">
+    
+                            <!--Card content-->
+                            <div class="card-body ">
+                                <!--Title-->
+                                <h4 class="card-title dark-grey-text ">
+                                    <strong>Unreal developer</strong>
+                                </h4>
+                                <h6 class="blue-text font-small font-bold ">
+                                    <b>Last Date To Apply : </b>
+                                    <strong>31/03/2018</strong>
+                                </h6>
+                                <!--Text-->
+                                <h5 clas="card-title dark-grey-text font-bold ">
+                                    <b>Skills Required : </b>
+                                </h5>
+                                <p class="card-text ">You will work on creating virtual indian road infrastructure. Before building the simulation, you will have to watch 200KM of India driving data.). Responsibility. You will work on Creating realistic Indian simulation so Giscle can test all it’s algorithms and model</p>
+                                <a href="{{url_for('jobapply')}} " class="btn btn-primary btn-md ">Apply Now</a>
+                            </div>
+    
+                        </div>
+                        <!--/.Card-->
+    
+                    </div>
+            </div>
+            <!--/.Second row-->
+
+            <!--Third row-->
+            <div class="row mt-4 wow fadeIn " data-wow-delay="0.2s ">
+                <!--First column-->
+                <div class="col-lg-4 ">
+
+                    <!--Card-->
+                    <div class="card hoverable ">
+
+                        <!--Card image-->
+                        <img style="width:540px;height:239px; " class="img-fluid " src="https://mdbootstrap.com/img/Photos/Slides/img%20(142).jpg
+                            " alt="Card image cap ">
+
+                        <!--Card content-->
+                        <div class="card-body ">
+                            <!--Title-->
+                            <h4 class="card-title dark-grey-text ">
+                                <strong>Electronics and Robotics</strong>
+                            </h4>
+                            <h6 class="blue-text font-small font-bold ">
+                                <b>Last Date To Apply : </b>
+                                <strong>31/03/2018</strong>
+                            </h6>
+                            <!--Text-->
+                            <h5 clas="card-title dark-grey-text font-bold ">
+                                <b>Skills Required : </b>
+                            </h5>
+                            <p class="card-text ">Fundamental and Good understanding of analog and power circuits. Knowledge of ROS and electrical design suits, C++ and C Understanding of Kalman filter Proportional–integral–derivative (PID) etc.). Responsibility: You will work on a. Implementation of these with the test vehicle and testing in close system</p>
+                            <a href="{{url_for('jobapply')}} " class="btn btn-primary btn-md ">Apply Now</a>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <!--/.First column-->
+
+                <!--Second column-->
+                <div class="col-lg-4 ">
+
+                    <!--Card-->
+                    <div class="card hoverable ">
+
+                        <!--Card image-->
+                        <img style="width:540px;height:239px; " class="img-fluid " src="https://mdbootstrap.com/img/Photos/Slides/img%20(140).jpg
+                            " alt="Card image cap ">
+
+                        <!--Card content-->
+                        <div class="card-body ">
+                            <!--Title-->
+                            <h4 class="card-title dark-grey-text ">
+                                <strong>Motion Planning and Control engineer</strong>
+                            </h4>
+                            <h6 class="blue-text font-small font-bold ">
+                                <b>Last Date To Apply : </b>
+                                <strong>31/03/2018</strong>
+                            </h6>
+                            <!--Text-->
+                            <h5 clas="card-title dark-grey-text font-bold ">
+                                <b>Skills Required : </b>
+                            </h5>
+                            <p class="card-text ">Any prior knowledge of developing real-time motion planners and verifying on simulator and real robots, C++ and C#, debug ability and never give up attitude). Responsibility: You will work on motion planning and control of test vehicle</p>
+                            <a href="{{url_for('jobapply')}} " class="btn btn-primary btn-md ">Apply Now</a>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <!--Second column-->
+                <div class="col-lg-4 ">
+
+                        <!--Card-->
+                        <div class="card hoverable ">
+    
+                            <!--Card image-->
+                            <img style="width:540px;height:239px; " class="img-fluid " src="https://mdbootstrap.com/img/Photos/Slides/img%20(112).jpg
+                                " alt="Card image cap ">
+    
+                            <!--Card content-->
+                            <div class="card-body ">
+                                <!--Title-->
+                                <h4 class="card-title dark-grey-text ">
+                                    <strong>Internet of Thing </strong>
+                                </h4>
+                                <h6 class="blue-text font-small font-bold ">
+                                    <b>Last Date To Apply : </b>
+                                    <strong>31/03/2018</strong>
+                                </h6>
+                                <!--Text-->
+                                <h5 clas="card-title dark-grey-text font-bold ">
+                                    <b>Skills Required : </b>
+                                </h5>
+                                <p class="card-text ">You should be knowing any of cloud IOT, Google Cloud or AWS etc. should have basics software knowledge). Responsibility: You will work on a. connecting some the device with the AWS IOT of Google iot. b. Work on making device independent from any connection</p>
+                                <a href="{{url_for('jobapply')}} " class="btn btn-primary btn-md ">Apply Now</a>
+                            </div>
+    
+                        </div>
+                        <!--/.Card-->
+    
+                    </div>
+            </div>
+            <!--/.Third row-->
+            <div class="row mt-4 wow fadeIn " data-wow-delay="0.2s ">
+                    <!--First column-->
+                    <div class="col-lg-4 ">
+    
+                        <!--Card-->
+                        <div class="card hoverable ">
+    
+                            <!--Card image-->
+                            <img style="width:540px;height:239px; " class="img-fluid " src="https://mdbootstrap.com/img/Photos/Slides/img%20(142).jpg
+                                " alt="Card image cap ">
+    
+                            <!--Card content-->
+                            <div class="card-body ">
+                                <!--Title-->
+                                <h4 class="card-title dark-grey-text ">
+                                    <strong>Hardware Design</strong>
+                                </h4>
+                                <h6 class="blue-text font-small font-bold ">
+                                    <b>Last Date To Apply : </b>
+                                    <strong>31/03/2018</strong>
+                                </h6>
+                                <!--Text-->
+                                <h5 clas="card-title dark-grey-text font-bold ">
+                                    <b>Skills Required : </b>
+                                </h5>
+                                <p class="card-text ">Should have some prior experience with the hardware design. Basic knowledge of Camera parts. You will design the system which will contains our software and hardwares.). Responsibility: You will work on  1. Various hardware such as Camera, and other sensors 2. You will also work on Giscle kit design.</p>
+                                <a href="{{url_for('jobapply')}} " class="btn btn-primary btn-md ">Apply Now</a>
+                            </div>
+    
+                        </div>
+                        <!--/.Card-->
+    
+                    </div>
+                    <!--/.First column-->
+    
+                    <!--Second column-->
+                    <div class="col-lg-4 ">
+    
+                        <!--Card-->
+                        <div class="card hoverable ">
+    
+                            <!--Card image-->
+                            <img style="width:540px;height:239px; " class="img-fluid " src="https://mdbootstrap.com/img/Photos/Slides/img%20(140).jpg
+                                " alt="Card image cap ">
+    
+                            <!--Card content-->
+                            <div class="card-body ">
+                                <!--Title-->
+                                <h4 class="card-title dark-grey-text ">
+                                    <strong>Embedded System</strong>
+                                </h4>
+                                <h6 class="blue-text font-small font-bold ">
+                                    <b>Last Date To Apply : </b>
+                                    <strong>31/03/2018</strong>
+                                </h6>
+                                <!--Text-->
+                                <h5 clas="card-title dark-grey-text font-bold ">
+                                    <b>Skills Required : </b>
+                                </h5>
+                                <p class="card-text ">Knowledge of circuit design, knowledge of VI editor, Kiel μVision, Proteus etc.). Responsibility: You will design the processor of Autonomous keeping in mind all the external factors. The processor should be  able to run the camera live will all the models running</p>
+                                <a href="{{url_for('jobapply')}} " class="btn btn-primary btn-md ">Apply Now</a>
+                            </div>
+    
+                        </div>
+                        <!--/.Card-->
+    
+                    </div>
+                    <!--Second column-->
+                    <div class="col-lg-4 ">
+    
+                            <!--Card-->
+                            <div class="card hoverable ">
+        
+                                <!--Card image-->
+                                <img style="width:540px;height:239px; " class="img-fluid " src="https://mdbootstrap.com/img/Photos/Slides/img%20(112).jpg
+                                    " alt="Card image cap ">
+        
+                                <!--Card content-->
+                                <div class="card-body ">
+                                    <!--Title-->
+                                    <h4 class="card-title dark-grey-text ">
+                                        <strong>Sensor Fusion (Lidar, Radar)</strong>
+                                    </h4>
+                                    <h6 class="blue-text font-small font-bold ">
+                                        <b>Last Date To Apply : </b>
+                                        <strong>31/03/2018</strong>
+                                    </h6>
+                                    <!--Text-->
+                                    <h5 clas="card-title dark-grey-text font-bold ">
+                                        <b>Skills Required : </b>
+                                    </h5>
+                                    <p class="card-text ">Basics knowledge of sensors such as Lidar, Radar, ultrasonics, GPU, IMU. Responsibility: We will work on fusion of all the sensors, camera etc</p>
+                                    <a href="{{url_for('jobapply')}} " class="btn btn-primary btn-md ">Apply Now</a>
+                                </div>
+        
+                            </div>
+                            <!--/.Card-->
+        
+                        </div>
+                </div>
+                <div class="row mt-4 wow fadeIn " data-wow-delay="0.2s ">
+                        <!--First column-->
+                        <div class="col-lg-4 ">
+        
+                            <!--Card-->
+                            <div class="card hoverable ">
+        
+                                <!--Card image-->
+                                <img style="width:540px;height:239px; " class="img-fluid " src="https://mdbootstrap.com/img/Photos/Slides/img%20(142).jpg
+                                    " alt="Card image cap ">
+        
+                                <!--Card content-->
+                                <div class="card-body ">
+                                    <!--Title-->
+                                    <h4 class="card-title dark-grey-text ">
+                                        <strong>Automobile electronics</strong>
+                                    </h4>
+                                    <h6 class="blue-text font-small font-bold ">
+                                        <b>Last Date To Apply : </b>
+                                        <strong>31/03/2018</strong>
+                                    </h6>
+                                    <!--Text-->
+                                    <h5 clas="card-title dark-grey-text font-bold ">
+                                        <b>Skills Required : </b>
+                                    </h5>
+                                    <p class="card-text ">Basics Knowledge of modern automotive technologies (e.g. CAN, Flexray.). Responsibility: You will work on a. Various protocols b. Hacking of car c. Connecting Autonomous kit in the form of api with the Car CAN protocols.</p>
+                                    <a href="{{url_for('jobapply')}} " class="btn btn-primary btn-md ">Apply Now</a>
+                                </div>
+        
+                            </div>
+                            <!--/.Card-->
+        
+                        </div>
+                        <!--/.First column-->
+        
+                        <!--Second column-->
+                        <div class="col-lg-4 ">
+        
+                            <!--Card-->
+                            <div class="card hoverable ">
+        
+                                <!--Card image-->
+                                <img style="width:540px;height:239px; " class="img-fluid " src="https://mdbootstrap.com/img/Photos/Slides/img%20(140).jpg
+                                    " alt="Card image cap ">
+        
+                                <!--Card content-->
+                                <div class="card-body ">
+                                    <!--Title-->
+                                    <h4 class="card-title dark-grey-text ">
+                                        <strong>Video Content creator</strong>
+                                    </h4>
+                                    <h6 class="blue-text font-small font-bold ">
+                                        <b>Last Date To Apply : </b>
+                                        <strong>31/03/2018</strong>
+                                    </h6>
+                                    <!--Text-->
+                                    <h5 clas="card-title dark-grey-text font-bold ">
+                                        <b>Skills Required : </b>
+                                    </h5>
+                                    <p class="card-text ">mage and Video both. You should also know video editing, Photography  pho You will update our work through video contents per week. You will create 10 video of 10 weeks and then one last video.) And if you have any of the above technical knowledge you are the perfect one for this post. Responsibility: a. Capture all the moments in the form of video b. Learn about their work, c. Video editing d. And building some amazing video content</p>
+                                    <a href="{{url_for('jobapply')}} " class="btn btn-primary btn-md ">Apply Now</a>
+                                </div>
+        
+                            </div>
+                            <!--/.Card-->
+        
+                        </div>
+                        <!--Second column-->
+                        <div class="col-lg-4 ">
+        
+                                <!--Card-->
+                                <div class="card hoverable ">
+            
+                                    <!--Card image-->
+                                    <img style="width:540px;height:239px; " class="img-fluid " src="https://mdbootstrap.com/img/Photos/Slides/img%20(112).jpg
+                                        " alt="Card image cap ">
+            
+                                    <!--Card content-->
+                                    <div class="card-body ">
+                                        <!--Title-->
+                                        <h4 class="card-title dark-grey-text ">
+                                            <strong>Marketing</strong>
+                                        </h4>
+                                        <h6 class="blue-text font-small font-bold ">
+                                            <b>Last Date To Apply : </b>
+                                            <strong>31/03/2018</strong>
+                                        </h6>
+                                        <!--Text-->
+                                        <h5 clas="card-title dark-grey-text font-bold ">
+                                            <b>Skills Required : </b>
+                                        </h5>
+                                        <p class="card-text ">You enjoy designing and planning events. We will organize three events in three different cities and you will design and plan those events.). Responsibility: a. Event design, b. Even execution, c. Promoting all the work to right place </p>
+                                        <a href="{{url_for('jobapply')}} " class="btn btn-primary btn-md ">Apply Now</a>
+                                    </div>
+            
+                                </div>
+                                <!--/.Card-->
+            
+                            </div>
+                    </div>
+                    
+            <hr>
+
+            <!--Pagination-->
+            
+            <!--/.Pagination-->
+        </div>
+        <!--/.Main layout-->
+    </main>
+
+    <!--/.Footer-->
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript " src="../static/js/jquery-3.1.1.min.js "></script>
+
+    <!-- Bootstrap dropdown -->
+    <script type="text/javascript " src="../static/js/popper.min.js "></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript " src="../static/js/bootstrap.min.js "></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript " src="../static/js/mdb.min.js "></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+{% endblock %}
+
+
+
+</body>
+
+</html>

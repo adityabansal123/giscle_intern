@@ -1,6 +1,24 @@
+
+{% extends "layout.html" %}
 {% block body %}
+<table class="table">
+
+        <!--Table head-->
+        <thead>
+            <tr>
+                
+                <th>Name</th>
+                <th>UserName</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Linkedin Profile</th>
+                <th>Position</th>
+                <th>Question 1 Answer</th>
+            </tr>
+        </thead>
+</table>
     {% for i in range(results|length) %}
-    <table>
+    <!-- <table>
         <tr>
             <td>{{ results[i-1]['Name'] }}</td>
             <td>{{ results[i-1]['UserName'] }}</td>
@@ -10,6 +28,32 @@
             <td>{{ results[i-1]['Position'] }}</td>
             <td>{{ results[i-1]['Answer'] }}</td>
         </tr>
-    </table>
+    </table> -->
+
+
+
+    <!--Table-->
+<table class="table">
+
+    <!--Table head-->
+    
+  <!--Table head-->
+
+    <!--Table body-->
+    <tbody>
+        <tr>
+        <td>{{ results[i-1]['Name'] }}</td>
+            <td>{{ results[i-1]['UserName'] }}</td>
+            <td>{{ results[i-1]['Email'] }}</td>
+            <td>{{ results[i-1]['Contact'] }}</td>
+            <td><a href="{{ results[i-1]['Linkedin'] }}">LinkedIn</a></td>
+            <td>{{ results[i-1]['Position'] }}</td>
+            <td>{{ results[i-1]['Answer'] }}</td>
+        </tr>
+    </tbody>
+    <!--Table body-->
+
+</table>
+<!--Table-->
     {% endfor %}
 {% endblock %}

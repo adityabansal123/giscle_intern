@@ -2,6 +2,7 @@ from py2neo import Graph, Node, Relationship
 import uuid
 
 graph = Graph()
+#graph=Graph("https://localhost:7474/db/data",user="neo4j",password="neo4j")
 
 class User:
     def __init__(self, username):
