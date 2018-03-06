@@ -94,6 +94,10 @@ def events():
 def partners():
     return render_template("partners.html")
 
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
 @app.route("/university")
 def university():
     return render_template("university.html")

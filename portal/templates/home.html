@@ -31,6 +31,17 @@
     box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.623);
 }
 
+.shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* box-shadow: inset 0px 0px 100px 100px rgb(0, 0, 0); */
+    background-size:cover;
+  box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.623);
+    top: 0;
+    left: 0;
+}
+
         main {
             padding-top: 3rem;
             padding-bottom: 2rem;
@@ -118,35 +129,38 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link dark-grey-text ml-3" href="{{url_for('about')}}">About</a>
+                        <a class="nav-link dark-blue-text ml-3" href="{{url_for('about')}}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link dark-grey-text ml-3" href="{{url_for('problems')}}">Problems and Solutions</a>
+                        <a class="nav-link dark-blue-text ml-3" href="{{url_for('problems')}}">Solutions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link dark-grey-text ml-3" href="#">Partners</a>
+                        <a class="nav-link dark-blue-text ml-3" href="{{url_for('partners')}}">Events and Partners</a>
                     </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link dark-blue-text ml-3" href="#">Events</a>
+                    </li> -->
                     <li class="nav-item">
-                        <a class="nav-link dark-grey-text ml-3" href="#">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link dark-grey-text ml-3" href="{{url_for('internships')}}">Careers
+                        <a class="nav-link dark-blue-text ml-3" href="{{url_for('internships')}}">Careers
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link dark-grey-text ml-3" href="#">Giscle University</a>
+                        <a class="nav-link dark-blue-text ml-3" href="#">Giscle University</a>
                     </li>
-                    {% if session.username %} 
+                    <li class="nav-item">
+                        <a class="nav-link dark-blue-text ml-3" href="{{url_for('contact')}}">Contact Us</a>
+                    </li>
+                    <!-- {% if session.username %} 
                     <li class="nav-item nav-link dark-grey-text ml-3">Logged in as {{ session.username }}</li>
-                    {% endif %}
+                    {% endif %} -->
                     {% if not session.username %}
                     <li class="nav-item">
-                    <a class="nav-link dark-grey-text ml-3" href="{{url_for('register')}}">Register</a>
+                    <a  style="color:red;font-weight:bold;" class="nav-link dark-grey-blue ml-3" href="{{url_for('register')}}">Register</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link dark-grey-text ml-3" href="{{url_for('login')}}">Login</a></li>
+                    <li class="nav-item"><a style="color:red;font-weight:bold;" class="nav-link dark-blue-text ml-3" href="{{url_for('login')}}">Login</a></li>
                     {% else %}
-                    <li class="nav-item"><a class="nav-link dark-grey-text ml-3" href="{{url_for('logout')}}">Logout</a></li>
+                    <li class="nav-item"><a style="color:red;font-weight:bold;" class="nav-link dark-blue-text ml-3" href="{{url_for('logout')}}">Logout</a></li>
                     {% endif %}
                     <!-- <li class="nav-item">
                         <a class="nav-link dark-grey-text ml-3" href="{{url_for('register')}}">Register</a>
@@ -172,9 +186,9 @@
         <!-- Intro Section -->
         <div class="view hm-white-light jarallax" data-jarallax='{"speed": 0.2}' >
           <video style="width:100%;box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.623);" autoplay muted loop id="myVideo">
-            <source src="../static/video/testvid.mp4" type="video/mp4">
+            <source src="../static/video/v4.mp4" type="video/mp4">
           </video>
-            <div class="full-bg-img">
+            <div class="full-bg-img shadow">
                 <div class="container flex-center">
                     <div class="row pt-5 mt-3">
                         <div class="col-md-12 mb-3">
@@ -182,7 +196,7 @@
                                 <h1 class="display-1 white-text mb-5 wow fadeInDown" data-wow-delay="0.3s">GISCLE
                                     <a class="white-text font-bold">Systems</a>
                                 </h1>
-                                <h5 class="font-up mb-5 mt-1 dark-grey-text spacing font-bold wow fadeInDown" data-wow-delay="0.3s">Making Autonomy Real In India</h5>
+                                <h5 style="color:#8d96a3;"class="font-up mb-5 mt-1  spacing font-bold wow fadeInDown" data-wow-delay="0.3s">Making Autonomy Real In India</h5>
                                 <a class="btn btn-light-blue btn-lg wow fadeInDown" data-wow-delay="0.3s" href="{{url_for('problems')}}">Products</a>
                                 <a class="btn btn-indigo btn-lg wow fadeInDown" data-wow-delay="0.3s" href="{{url_for('about')}}">About us</a>
                             </div>
@@ -205,7 +219,7 @@
                 <div class="col-lg-7">
                     <!--Featured image -->
                     <div class="view overlay hm-white-light z-depth-1-half">
-                        <img src="../static/img/img/image5.jpg" class="img-fluid " alt="">
+                        <img src="../static/img/img/image5.jpg" style="height:300px;" class="img-fluid " alt="">
                         <div class="mask">
                         </div>
                     </div>
@@ -232,10 +246,10 @@
                     <div class="card mb-r wow fadeIn" data-wow-delay="0.4s">
 
                         <!--Card image-->
-                        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/65.jpg" alt="Card image cap">
+                        <img class="img-fluid" style="height:175px;" src="../static/img/img/image7.png" alt="Card image cap">
 
                         <!--Card content-->
-                        <div class="card-body">
+                        <div class="card-body" style="height:155px;">
                             <!--Title-->
                             <h4 class="card-title text-center dark-grey-text">
                                 <strong>Death Rate</strong>
@@ -256,10 +270,10 @@
                     <div class="card mb-r wow fadeIn" data-wow-delay="0.6s">
 
                         <!--Card image-->
-                        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/64.jpg" alt="Card image cap">
+                        <img class="img-fluid" style="height:175px;" src="../static/img/img/image6.jpg" alt="Card image cap">
 
                         <!--Card content-->
-                        <div class="card-body">
+                        <div class="card-body" style="height:155px;">
                             <!--Title-->
                             <h4 class="card-title text-center dark-grey-text">
                                 <strong>Death Toll</strong>
@@ -280,10 +294,10 @@
                     <div class="card mb-r wow fadeIn" data-wow-delay="0.8s">
 
                         <!--Card image-->
-                        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/72.jpg" alt="Card image cap">
+                        <img class="img-fluid" style="height:175px;" src="../static/img/img/image8.jpg" alt="Card image cap">
 
                         <!--Card content-->
-                        <div class="card-body">
+                        <div class="card-body" style="height:155px;"> 
                             <!--Title-->
                             <h4 class="card-title text-center dark-grey-text">
                                 <strong>Other Factors</strong>
@@ -411,65 +425,49 @@
     <!--/.Main layout-->
 
    
-    <!-- <footer class="page-footer center-on-small-only mt-0 mdb-color">
+    
+    <!--Footer-->
+    <footer class="page-footer center-on-small-only mt-0 mdb-color">
 
-        
+        <!--Footer links-->
         <div class="container">
             <div class="row mt-4">
-             
-                <div class="col-lg-3 col-md-6">
-                    <p>Material Design (codenamed Quantum Paper) is a design language developed by Google.</p>
-                    <p>Material Design for Bootstrap (MDB) is a powerful Material Design UI KIT for most popular HTML, CSS,
-                        and JS framework - Bootstrap.</p>
+                <!--First column-->
+                <div class="col-lg-4 col-md-6">
+                    <br/>
+                    <h4 style="color:#ed8871;"class="display-4"><strong>GISCLE</strong></h4>
+                    <br/>
+                    <p>India's First Autonomous Startup building Autonomous Kit with leave-one-out Cross Validation using Crowdsourced Data</p>
                 </div>
-                
+                <!--/.First column-->
                 <hr class="w-100 clearfix d-sm-none">
-                
-                <div class="col-lg-2 col-md-6 ml-auto">
-                    <h5 class="title mb-3">
-                        <strong>First column</strong>
-                    </h5>
-                    <ul>
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 4</a>
-                        </li>
-                    </ul>
+                <!--Second column-->
+                <div class="col-lg-4 col-md-6 ml-auto">
+                    <br/>
+                    <h4 class="title mb-3">
+                        <strong>Get In Touch</strong>
+                    </h4>
+                    
+                    <p>Connect to Us and Share your Suggestions with Us !
+                        <br/>
+                    Phone : +91-7667749930
+                    <br/>
+                    Email : passion@giscle.com</p>
                 </div>
-            
+                <!--/.Second column-->
                 <hr class="w-100 clearfix d-sm-none">
-               
-                <div class="col-lg-2 col-md-6 ml-auto">
-                    <h5 class="title mb-3">
-                        <strong>Second column</strong>
-                    </h5>
-                    <ul>
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 4</a>
-                        </li>
-                    </ul>
+                <!--Third column-->
+                <div class="col-lg-4 col-md-6 ml-auto">
+                        <br/>
+                        <h4 class="title mb-3">
+                            <strong>Follow Us on Social Media</strong>
+                        </h4>
+                    
                 </div>
-                
-                <hr class="w-100 clearfix d-sm-none">
-                
-                <div class="col-lg-2 col-md-6 ml-auto">
+                <!--/.Third column-->
+                <!-- <hr class="w-100 clearfix d-sm-none"> -->
+                <!--Fourth column-->
+                <!-- <div class="col-lg-2 col-md-6 ml-auto">
                     <h5 class="title mb-3">
                         <strong>Third column</strong>
                     </h5>
@@ -487,15 +485,47 @@
                             <a href="#!">Link 4</a>
                         </li>
                     </ul>
-                </div>
-                
+                </div> -->
+                <!--/.Fourth column-->
             </div>
+        </div>
+        <!--/.Footer links-->
+
+        <hr>
+
+        <!--Call to action-->
+        <!-- <div class="call-to-action">
+            <h4 class="mb-5">Material Design for Bootstrap</h4>
+            <ul>
+                <li>
+                    <h5>Get our UI KIT for free</h5>
+                </li>
+                <li>
+                    <a target="_blank" href="https://mdbootstrap.com/getting-started/" class="btn btn-danger" rel="nofollow">Sign up!</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-info" rel="nofollow">Learn more</a>
+                </li>
+            </ul>
         </div> -->
+        <!--/.Call to action-->
+
+        <!--Copyright-->
+        <div class="footer-copyright">
+            <div style="text-align: center;" class="container-fluid">
+                © 2018 Copyright:
+                <a href="#"> GISCLE </a>
+
+            </div>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
         
 
         <hr>
       </footer>
-      </body>
+      
     <!--/.Footer-->
 
 
