@@ -2,7 +2,8 @@ from py2neo import Graph, Node, Relationship
 import uuid
 
 
-graph = Graph()
+url = 'http://ec2-13-127-142-195.ap-south-1.compute.amazonaws.com:7474/db/data/'
+graph = Graph(url, user="neo4j", password="ganeshjha")
 
 class User:
     def __init__(self, username):
