@@ -2,8 +2,14 @@ from flask import Flask, request, session, redirect, url_for, render_template, f
 from .models import User
 from .models import entries
 import os
+from flask_basicauth import BasicAuth
 
 app = Flask(__name__)
+
+app.config['BASIC_AUTH_USERNAME'] = 'sumanjha'
+app.config['BASIC_AUTH_PASSWORD'] = 'ganeshjha'
+
+basic_auth = BasicAuth(app)
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -70,6 +76,7 @@ def apply():
     return redirect(url_for("internships"))
 
 @app.route("/admin")
+@basic_auth.required
 def admin():
     results = entries()
     return render_template("entries.html", results=results)
@@ -105,6 +112,10 @@ def university():
 @app.route("/")
 def home():
     return render_template("home.html")
+
+@app.route('/resume/<username>')
+def resume(username):
+    return send_from_directory(os.path.join(APP_ROOT, 'cvs/'), username)
 
 @app.route("/logout")
 def logout():
