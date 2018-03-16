@@ -25,6 +25,7 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript " src="../static/js/mdb.min.js "></script>
 
+    
     <script>
 
     </script>
@@ -78,31 +79,31 @@
             <!--Navbar-->
             <nav class="navbar navbar-expand-lg navbar-inverse navbar-light">
                 <div class="container">
-                    <a class="navbar-brand blue-text font-bold" href="#">GISCLE</a>
+                    <a class="navbar-brand blue-text font-bold" href="{{url_for('home')}}"><strong >GISCLE <b class="navbar-brand blue-text font-bold" style="font-size:10px;">India</b></strong></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item ">
+                            <!-- <li class="nav-item ">
                                 <a class="nav-link ml-4" href="{{url_for('home')}}">Home
 
                                 </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link dark-grey-text ml-3" href="{{url_for('about')}}">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link dark-grey-text ml-3" href="{{url_for('problems')}}">Solutions</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link dark-grey-text ml-3" href="{{url_for('partners')}}">Events and Partners</a>
-                            </li>
+                            </li> -->
                             <!-- <li class="nav-item">
+                                <a class="nav-link dark-grey-text ml-3" href="{{url_for('about')}}">About</a>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link dark-grey-text ml-3" href="{{url_for('problems')}}">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link dark-grey-text ml-3" href="{{url_for('partners')}}">Partners</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link dark-grey-text ml-3" href="{{url_for('events')}}">Events</a>
                             </li>
-                            <li class="nav-item"> -->
+                            <li class="nav-item">
                                 <a class="nav-link dark-grey-text ml-3" href="{{url_for('internships')}}">Careers
                                     <span class="sr-only">(current)</span>
                                 </a>
@@ -110,17 +111,17 @@
                             <li class="nav-item">
                                 <a class="nav-link dark-grey-text ml-3" href="{{url_for('university')}}">Giscle University</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link dark-grey-text ml-3" href="{{url_for('contact')}}">Contact Us</a>
-                            </li>
+                            </li> -->
                             
                             <!-- {% if session.username %} 
                             <li style="color:red;font-weight: bold;padding-left: 5px;"class="nav-item nav-link dark-grey-text ml-3">Logged in as {{ session.username }}</li>
                             {% endif %} -->
                             {% if not session.username %}
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                             <a class="nav-link dark-grey-text ml-3" href="{{url_for('register')}}">Register</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item"><a class="nav-link dark-grey-text ml-3" href="{{url_for('login')}}">Login</a></li>
                             {% else %}
                             <li class="nav-item"><a style="color:red;"class="nav-link dark-blue-text ml-3" href="{{url_for('logout')}}"><strong>Logout</strong></a></li>
@@ -183,11 +184,13 @@
         {% for message in get_flashed_messages() %}
         {% if message=='USER EXISTS' or message=='INVALID LOGIN' %}
         <div style="text-align:center;color:red;font-weight:bold;">{{ message }}</div>
-        {% elif message=='SUCCEESFULLY REGISTERED' or message=='SUCCESSFULLY LOGGED IN' %}
+        {% elif message=='SUCCEESFULLY REGISTERED' or message=='SUCCESSFULLY LOGGED IN' or 'SUCCESSFULLY APPLIED FOR JOB ROLE' %}
         <div style="text-align:center;color:green;font-weight:bold;">{{ message }}</div>
         {% endif %}
         {% endfor %} {% block body %} {% endblock %}
     </div>
 
+
+    
 
 </html>

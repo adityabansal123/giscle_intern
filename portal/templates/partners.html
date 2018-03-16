@@ -1,17 +1,118 @@
-{% extends "layout.html" %}
-
-{% block body %}
+ {% extends "layout.html" %} {% block body %}
 <div class="container">
-
-        <!--Page heading-->
         <div class="row wow fadeIn" data-wow-delay="0.2s">
-            <div class="col-md-12">
+                <div class="col-md-12">
+                        <h1 class="h1-responsive" style="color:#5ed666;">
+                                <b>GISCLE</b>
+                                <small class="text-muted">Partners</small>
+                        </h1>
+                </div>
+        </div>
+        <!--/.Page heading-->
+        <hr>
+        <!--Page heading-->
+
+        <h2 class="h2-responsive">
+
+
+                <small class="text-muted" style="font-size:22px;">
+                        <span>We are on a mission to solve some of the very complicated problems. This is the beginning of our
+                                never-ending Journey. And we want to make this Journey interesting, fast and valuable with
+                                you because we believe in Partnership.
+                                <br/> Can you help us in the building? Let's build together. Drop an Email at info@giscle.com
+                                and we will contact you soon</span>
+                </small>
+        </h2>
+        <br/>
+        <strong>
+                <h3 class="h2-responsive" style="text-align: center;font-size: 35px;color: blueviolet">Our Partners</h3>
+        </strong>
+</div>
+
+<style>
+        div.gallery {
+                /* margin: 5px; */
+                border: 1px solid #ccc;
+                float: left;
+                width: 180px;
+                padding: 5px;
+        }
+
+        div.gallery:hover {
+                border: 1px solid #777;
+        }
+
+        div.gallery img {
+                width: 100%;
+                height: auto;
+        }
+
+        div.desc {
+                padding: 15px;
+                text-align: center;
+        }
+</style>
+</head>
+
+<body>
+        <div class="container">
                 <br/>
-                <br/>
-<h2 class="h2-responsive">
-        <small class="text-muted" style="font-size:32px;">
-            Coming Soon
-            </small>
-    </h2>
-            </div></div></div>
-{% endblock %}
+                <div style="padding-left:170px;padding-right:100px;">
+                        <div class="gallery " width="200" height="100">
+                                <a target="_blank" href="../static/logo1/logo1.png">
+                                        <img src="../static/logo1/logo1.png" alt="Trolltunga Norway" width="200" height="100">
+                                </a>
+                                <!-- <div class="desc">Add a description of the image here</div> -->
+                        </div>
+
+                        <div class="gallery" width="200" height="100">
+                                <a target="_blank" href="../static/logo1/logo2.png">
+                                        <img src="../static/logo1/logo2.png" alt="Forest" width="200" height="100">
+                                </a>
+                                <!-- <div class="desc">Add a description of the image here</div> -->
+                        </div>
+
+                        <div class="gallery" width="200" height="100">
+                                <a target="_blank" href="../static/logo1/logo3.gif">
+                                        <img src="../static/logo1/logo3.gif" alt="Northern Lights" width="200" height="100">
+                                </a>
+                                <!-- <div class="desc">Add a description of the image here</div> -->
+                        </div>
+
+                        <div class="gallery" width="200" height="100">
+                                <a target="_blank" href="../static/logo1/logo4.png">
+                                        <img src="../static/logo1/logo4.png" alt="Mountains" width="200" height="100">
+                                </a>
+                                <!-- <div class="desc">Add a description of the image here</div> -->
+                        </div>
+                        <div class="gallery " width="200" height="100">
+                                <a target="_blank" href="../static/logo1/logo5.jpg">
+                                        <img src="../static/logo1/logo5.jpg" alt="Trolltunga Norway" width="600" height="400">
+                                </a>
+                                <!-- <div class="desc">Add a description of the image here</div> -->
+                        </div>
+
+                        <div class="gallery" width="200" height="100">
+                                <a target="_blank" href="../static/logo1/logo6.jpg">
+                                        <img src="../static/logo1/logo6.jpg" alt="Forest" width="200" height="100">
+                                </a>
+                                <!-- <div class="desc">Add a description of the image here</div> -->
+                        </div>
+
+                        <div class="gallery" width="200" height="100">
+                                <a target="_blank" href="../static/logo1/logo7.png">
+                                        <img src="../static/logo1/logo7.png" alt="Northern Lights" width="200" height="100">
+                                </a>
+                                <!-- <div class="desc">Add a description of the image here</div> -->
+                        </div>
+
+                        <div class="gallery" width="200" height="100">
+                                <a target="_blank" href="../static/logo1/logo8.png">
+                                        <img src="../static/logo1/logo8.png" alt="Mountains" width="200" height="100">
+                                </a>
+                                <!-- <div class="desc">Add a description of the image here</div> -->
+                        </div>
+                </div>
+        </div>
+
+        {% endblock %}

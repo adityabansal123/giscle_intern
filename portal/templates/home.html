@@ -6,9 +6,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-    <title>Material Design Bootstrap</title>
-
+    <meta name="keywords" content="Autonomous, Self-driving, ADAS, Cars , Kit , Offercam , Annotation , Lane Detection , Drowsy Detection , Collision Detection">
+    <meta name="description" content="Making autonomy real in India. Its high time to combine technologies like Artificial Intelligence, Machine Learning, Augumented Reality and other mainstream technologies to carve out a new advanced automation on the roads of India">
+    <title>GISCLE India</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/logo1/mstile-310x150.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/logo1/mstile-310x150.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/logo1/mstile-310x150.png">
+    <link rel="manifest" href="../static/logo1/site.webmanifest">
+    <link rel="mask-icon" href="../static/logo1/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-TileImage" content="../static/logo1/mstile-310x150.png">
+    <meta name="theme-color" content="#ffffff">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.0/css/fontawesome.css">
     <link href="https://use.fontawesome.com/releases/v5.0.0/css/all.css" rel="stylesheet">
@@ -22,25 +30,25 @@
         /* TEMPLATE STYLES */
 
         #myVideo {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    box-shadow: 0 0 5px black;
-    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.623);
-}
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            box-shadow: 0 0 5px black;
+            box-shadow: inset 0 0 0 2500px rgba(0, 0, 0, 0.723);
+        }
 
-.shadow {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    /* box-shadow: inset 0px 0px 100px 100px rgb(0, 0, 0); */
-    background-size:cover;
-  box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.623);
-    top: 0;
-    left: 0;
-}
+        .shadow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /* box-shadow: inset 0px 0px 100px 100px rgb(0, 0, 0); */
+            background-size: cover;
+            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.623);
+            top: 0;
+            left: 0;
+        }
 
         main {
             padding-top: 3rem;
@@ -114,58 +122,63 @@
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top scrolling-navbar">
             <div class="container">
-                <a class="navbar-brand blue-text font-bold" href="#">
-                    <strong>GISCLE</strong>
+                <a class="navbar-brand blue-text font-bold" href="{{url_for('home')}}">
+                  <strong >GISCLE <b class="navbar-brand blue-text font-bold" style="font-size:10px;">India</b></strong>
+                    
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item ">
+                    <ul class="navbar-nav mr-auto">
+                        <!-- <li class="nav-item ">
                         <a class="nav-link ml-4" href="{{url_for('home')}}">Home
 
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link dark-blue-text ml-3" href="{{url_for('about')}}">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link dark-blue-text ml-3" href="{{url_for('problems')}}">Solutions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link dark-blue-text ml-3" href="{{url_for('partners')}}">Events and Partners</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link dark-blue-text ml-3" href="#">Events</a>
                     </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link dark-blue-text ml-3" href="{{url_for('internships')}}">Careers
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link dark-blue-text ml-3" href="#">Giscle University</a>
-                    </li>
-                    <li class="nav-item">
+                        <!-- <li class="nav-item">
+                            <a class="nav-link dark-blue-text ml-3" href="{{url_for('about')}}">About</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link dark-blue-text ml-3" href="{{url_for('problems')}}">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dark-blue-text ml-3" href="{{url_for('partners')}}">Partners</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dark-blue-text ml-3" href="{{url_for('events')}}">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dark-blue-text ml-3" href="{{url_for('internships')}}">Careers
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dark-blue-text ml-3" href="#">Giscle University</a>
+                        </li>
+                        <!-- <li class="nav-item">
                         <a class="nav-link dark-blue-text ml-3" href="{{url_for('contact')}}">Contact Us</a>
-                    </li>
-                    <!-- {% if session.username %} 
+                    </li> -->
+                        <!-- {% if session.username %} 
                     <li class="nav-item nav-link dark-grey-text ml-3">Logged in as {{ session.username }}</li>
                     {% endif %} -->
-                    {% if not session.username %}
-                    <li class="nav-item">
+                        {% if not session.username %}
+                        <!-- <li class="nav-item">
                     <a  style="color:red;font-weight:bold;" class="nav-link dark-grey-blue ml-3" href="{{url_for('register')}}">Register</a>
-                    </li>
-                    <li class="nav-item"><a style="color:red;font-weight:bold;" class="nav-link dark-blue-text ml-3" href="{{url_for('login')}}">Login</a></li>
-                    {% else %}
-                    <li class="nav-item"><a style="color:red;font-weight:bold;" class="nav-link dark-blue-text ml-3" href="{{url_for('logout')}}">Logout</a></li>
-                    {% endif %}
-                    <!-- <li class="nav-item">
+                    </li> -->
+                        <li class="nav-item">
+                            <a style="color:red;font-weight:bold;" class="nav-link dark-blue-text ml-3" href="{{url_for('login')}}">Login</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a style="color:red;font-weight:bold;" class="nav-link dark-blue-text ml-3" href="{{url_for('logout')}}">Logout</a>
+                        </li>
+                        {% endif %}
+                        <!-- <li class="nav-item">
                         <a class="nav-link dark-grey-text ml-3" href="{{url_for('register')}}">Register</a>
                     </li> -->
-                    <!-- <li class="nav-item btn-group">
+                        <!-- <li class="nav-item btn-group">
                         <a class="nav-link dropdown-toggle dark-grey-text ml-3" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">Dropdown
                         </a>
@@ -175,7 +188,7 @@
                             <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </li> -->
-                </ul>
+                    </ul>
                     <!-- <form class="form-inline">
                         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
                     </form> -->
@@ -184,21 +197,25 @@
         </nav>
 
         <!-- Intro Section -->
-        <div class="view hm-white-light jarallax" data-jarallax='{"speed": 0.2}' >
-          <video style="width:100%;box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.623);" autoplay muted loop id="myVideo">
-            <source src="../static/video/v4.mp4" type="video/mp4">
-          </video>
+        <div class="view hm-white-light jarallax" data-jarallax='{"speed": 0.2}'>
+            <video style="width:100%;box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.623);" autoplay muted loop id="myVideo">
+                <source src="../static/video/v4.mp4" type="video/mp4">
+            </video>
             <div class="full-bg-img shadow">
                 <div class="container flex-center">
                     <div class="row pt-5 mt-3">
                         <div class="col-md-12 mb-3">
                             <div class="intro-info-content text-center">
-                                <h1 class="display-1 white-text mb-5 wow fadeInDown" data-wow-delay="0.3s">GISCLE
-                                    <a class="white-text font-bold">Systems</a>
-                                </h1>
-                                <h5 style="color:#8d96a3;"class="font-up mb-5 mt-1  spacing font-bold wow fadeInDown" data-wow-delay="0.3s">Making Autonomy Real In India</h5>
-                                <a class="btn btn-light-blue btn-lg wow fadeInDown" data-wow-delay="0.3s" href="{{url_for('problems')}}">Products</a>
-                                <a class="btn btn-indigo btn-lg wow fadeInDown" data-wow-delay="0.3s" href="{{url_for('about')}}">About us</a>
+                               <b> <h3 style="font-size:60px;color:#94999e;" class=" display-1  mb-5 wow fadeInDown" data-wow-delay="0.3s">Making Autonomy Real In India
+                                    <!-- <a class="white-text font-bold">India</a> -->
+                                </h3></b>
+
+                                <!-- <h5 style="color:#8d96a3;" class="font-up mb-5 mt-1  spacing font-bold wow fadeInDown" data-wow-delay="0.3s">Making Autonomy Real In India</h5> -->
+                                <br/>
+                                <br/>
+                                <br/>
+                                <a target="_blank" style="font-size:18px;height:50px;width:160px;"class="btn btn-success btn-lg wow fadeInDown btn-md" data-wow-delay="0.3s" href="{{url_for('problems')}}">Products</a>
+                                <!-- <a class="btn btn-indigo btn-lg wow fadeInDown btn-md" data-wow-delay="0.3s" href="{{url_for('about')}}">About us</a> -->
                             </div>
                         </div>
                     </div>
@@ -227,19 +244,25 @@
                 </div>
 
                 <!--Main information-->
-                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.2s">
+                <div style="padding-top:30px;"class="col-lg-5 wow fadeIn" data-wow-delay="0.2s">
                     <h2 class="h2-responsive font-bold dark-grey-text">Your safety is our Command </h2>
                     <hr>
-                    <p class="dark-grey-text mt-3">We are a group of Industrialist , Academicians , Researchers who are working together on a large scale to make Autonomous Driving a Reality in Indian Roads . We keep outer environment as well as driver as point of contact</p>
-                    <a href="" class="btn btn-indigo btn-md">Products</a>
+                    <p class="dark-grey-text mt-3">We are a group of Industrialist , Academicians , Researchers who are working together on a large scale
+                        to make Autonomous Driving a Reality in Indian Roads . We keep outer environment and Driver as point
+                        of contact</p>
+                    <!-- <a href="{{url_for('problems')}}" class="btn btn-indigo btn-md">Products</a> -->
                 </div>
             </div>
             <!--/.First row-->
 
             <hr class="extra-margins my-5">
-
+            <h3 style="padding-top:0px;padding-bottom: 0px;"class="text-center title my-5   dark-grey-text font-bold wow fadeIn" data-wow-delay="0.2s">
+                    <strong>Problems</strong>
+                </h3>
+                
             <!--Second row-->
             <div class="row pt-4 mb-4">
+                    
                 <!--First columnn-->
                 <div class="col-lg-4">
                     <!--Card-->
@@ -297,7 +320,7 @@
                         <img class="img-fluid" style="height:175px;" src="../static/img/img/image8.jpg" alt="Card image cap">
 
                         <!--Card content-->
-                        <div class="card-body" style="height:155px;"> 
+                        <div class="card-body" style="height:155px;">
                             <!--Title-->
                             <h4 class="card-title text-center dark-grey-text">
                                 <strong>Other Factors</strong>
@@ -324,26 +347,44 @@
 
                     <!-- Section heading -->
                     <h3 class="text-center title my-5 pt-4 pb-5 dark-grey-text font-bold wow fadeIn" data-wow-delay="0.2s">
-                        <strong>Our services</strong>
+                        <strong>Our Solutions</strong>
                     </h3>
 
                     <!-- First row -->
                     <div class="row wow fadeIn" data-wow-delay="0.4s">
 
                         <!-- First column -->
-                        <div class="col-md-6 mb-r text-center">
+                        <div class="col-md-6 mb-r text-center" style="padding-right: 0%">
 
                             <!--Panel-->
                             <div class="card card-body text-left white hoverable">
-                                <p class="feature-title title font-bold dark-grey-text font-up spacing mt-4 mx-4">
+                                <!-- <p class="feature-title title font-bold dark-grey-text font-up spacing mt-4 mx-4">
                                     <i class="fas fa-square indigo-text mr-2" aria-hidden="true"></i>
                                     <strong>Lane Keeping</strong>
-                                </p>
-                                <p class="grey-text font-small mx-4">Keeping the road lane alignment
+                                </p> -->
+                                <!-- <p class="grey-text font-small mx-4">Keeping the road lane alignment
                                     <p class="font-small font-bold indigo-text mx-4 mb-0">
                                         <a>read more</a>
                                     </p>
-                                </p>
+                                </p> -->
+                                <div class="card card-image" style="background-image: url(../static/img/img/lane6.jpg);">
+
+                                    <!-- Content -->
+                                    <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                                        <div>
+                                            <!-- <h5 class="pink-text"><i class="fa fa-pie-chart"></i> Marketing</h5> -->
+                                            <h3 class="card-title pt-2">
+                                                <strong>Lane Keeping</strong>
+                                            </h3>
+                                            <p>GISCLE uses onboard solutions which can sense the vehicle deviating from its
+                                                lane, the system helps the car stay on course near the center of the lane
+                                                by continuously applying a small amount of counter-steering force</p>
+                                            <a target="_blank" class="btn btn-pink" href="https://www.youtube.com/watch?v=tb8FSGQ5HPc">
+                                                <i class="fa fa-clone left"></i> View Demo</a>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
                             </div>
                             <!--/.Panel-->
 
@@ -351,11 +392,11 @@
                         <!-- /First column -->
 
                         <!-- Second column -->
-                        <div class="col-md-6 mb-r text-center">
+                        <div class="col-md-6 mb-r text-center" style="padding-left: 0%">
 
                             <!--Panel-->
                             <div class="card card-body text-left white hoverable">
-                                <p class="feature-title title font-bold dark-grey-text font-up spacing mt-4 mx-4">
+                                <!-- <p class="feature-title title font-bold dark-grey-text font-up spacing mt-4 mx-4">
                                     <i class="fa fa-square indigo-text mr-2" aria-hidden="true"></i>
                                     <strong>Sleep and Distraction Warning</strong>
                                 </p>
@@ -363,7 +404,25 @@
                                     <p class="font-small font-bold indigo-text mx-4 mb-0">
                                         <a>read more</a>
                                     </p>
-                                </p>
+                                </p> -->
+                                <div class="card card-image" style="background-image: url(../static/img/img/sleep2.jpg);">
+
+                                    <!-- Content -->
+                                    <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                                        <div>
+                                            <!-- <h5 class="pink-text"><i class="fa fa-pie-chart"></i> Marketing</h5> -->
+                                            <h3 class="card-title pt-2">
+                                                <strong>Sleep and Distraction Warning</strong>
+                                            </h3>
+                                            <p>Driver Alert Realsense uses the unique pupil,eye,mouth and other facial identification
+                                                technology to detect and analyze the drowsiness of driver. When it judges
+                                                a driver in fatigue status, it will provide warning alarm to remind the driver.</p>
+                                            <a target="_blank" class="btn btn-pink" href="https://www.youtube.com/watch?v=0U0yMmf1TD8&feature=youtu.be">
+                                                <i class="fa fa-clone left"></i> View Demo</a>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
                             </div>
                             <!--/.Panel-->
 
@@ -371,11 +430,11 @@
                         <!-- /.Second column -->
 
                         <!-- Third column -->
-                        <div class="col-md-6 mb-r text-center">
+                        <div class="col-md-6 mb-r text-center" style="padding-right: 0%">
 
                             <!--Panel-->
                             <div class="card card-body text-left white hoverable">
-                                <p class="feature-title title font-bold dark-grey-text font-up spacing mt-4 mx-4">
+                                <!-- <p class="feature-title title font-bold dark-grey-text font-up spacing mt-4 mx-4">
                                     <i class="fa fa-square indigo-text mr-2" aria-hidden="true"></i>
                                     <strong>Collision Warning</strong>
                                 </p>
@@ -383,7 +442,25 @@
                                     <p class="font-small font-bold indigo-text mx-4 mb-0">
                                         <a>read more</a>
                                     </p>
-                                </p>
+                                </p> -->
+                                <div class="card card-image" style="background-image: url(../static/img/img/collision.jpeg);">
+
+                                    <!-- Content -->
+                                    <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                                        <div>
+                                            <!-- <h5 class="pink-text"><i class="fa fa-pie-chart"></i> Marketing</h5> -->
+                                            <h3 class="card-title pt-2">
+                                                <strong>Collision Warning</strong>
+                                            </h3>
+                                            <p>GISCLE uses onboard camera which captures live video stream and scans the road
+                                                ahead while you drive. It’s designed to warn you if you’re about to crash
+                                                into a slower moving or stopped car. </p>
+                                            <a target="_blank" href="https://www.youtube.com/watch?v=x6c2zm7m_Fs" class="btn btn-pink">
+                                                <i class="fa fa-clone left"></i> View Demo</a>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
                             </div>
                             <!--/.Panel-->
 
@@ -391,11 +468,11 @@
                         <!-- /.Third column -->
 
                         <!-- Fourth column -->
-                        <div class="col-md-6 mb-r text-center">
+                        <div class="col-md-6 mb-r text-center" style="padding-left: 0%">
 
                             <!--Panel-->
                             <div class="card card-body text-left white hoverable">
-                                <p class="feature-title title font-bold dark-grey-text font-up spacing mt-4 mx-4">
+                                <!-- <p class="feature-title title font-bold dark-grey-text font-up spacing mt-4 mx-4">
                                     <i class="fa fa-square indigo-text mr-2" aria-hidden="true"></i>
                                     <strong>Road Lane Departure Warning</strong>
                                 </p>
@@ -403,7 +480,25 @@
                                     <p class="font-small font-bold indigo-text mx-4 mb-0">
                                         <a>read more</a>
                                     </p>
-                                </p>
+                                </p> -->
+                                <div class="card card-image" style="background-image: url(../static/img/img/depart3.jpg);">
+
+                                    <!-- Content -->
+                                    <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                                        <div>
+                                            <!-- <h5 class="pink-text"><i class="fa fa-pie-chart"></i> Marketing</h5> -->
+                                            <h3 class="card-title pt-2">
+                                                <strong>Lane Switching Warning</strong>
+                                            </h3>
+                                            <p>GISCLE uses onboard camera which captures live video stream and scans the road
+                                                ahead while you drive. It’s designed to warn you if you’re about to crash
+                                                into a slower moving or stopped car. </p>
+                                            <a target="_blank" class="btn btn-pink" href="https://www.youtube.com/watch?v=dT8SpvRnUkc">
+                                                <i class="fa fa-clone left"></i> View Demo</a>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
                             </div>
                             <!--/.Panel-->
 
@@ -424,8 +519,8 @@
     </main>
     <!--/.Main layout-->
 
-   
-    
+
+
     <!--Footer-->
     <footer class="page-footer center-on-small-only mt-0 mdb-color">
 
@@ -435,9 +530,12 @@
                 <!--First column-->
                 <div class="col-lg-4 col-md-6">
                     <br/>
-                    <h4 style="color:#ed8871;"class="display-4"><strong>GISCLE</strong></h4>
+                    <h4 style="color:#ed8871;" class="display-4">
+                        <strong>GISCLE</strong>
+                    </h4>
                     <br/>
-                    <p>India's First Autonomous Startup building Autonomous Kit with leave-one-out Cross Validation using Crowdsourced Data</p>
+                    <p>India's First Autonomous Startup building Autonomous Kit with leave-one-out Cross Validation using Crowdsourced
+                        Data</p>
                 </div>
                 <!--/.First column-->
                 <hr class="w-100 clearfix d-sm-none">
@@ -447,22 +545,39 @@
                     <h4 class="title mb-3">
                         <strong>Get In Touch</strong>
                     </h4>
-                    
-                    <p>Connect to Us and Share your Suggestions with Us !
-                        <br/>
-                    Phone : +91-7667749930
-                    <br/>
-                    Email : passion@giscle.com</p>
+
+                    <p>Connect to Us and Share your Suggestions !
+                        <br/> Phone : +91-7667749930
+                        <br/> Email : info@giscle.com</p>
                 </div>
                 <!--/.Second column-->
                 <hr class="w-100 clearfix d-sm-none">
                 <!--Third column-->
                 <div class="col-lg-4 col-md-6 ml-auto">
-                        <br/>
-                        <h4 class="title mb-3">
-                            <strong>Follow Us on Social Media</strong>
-                        </h4>
-                    
+                    <br/>
+                    <h4 class="title mb-3">
+                        <strong>Follow Us on Social Media</strong>
+                    </h4>
+                    <ul style="list-style-type: none;">
+                        <li>
+                            <a target="_blank" href="https://facebook.com/giscle "><i style="padding-right:10px;font-size:20px;"class="fab fa-facebook-square"></i>Facebook</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://twitter.com/GiscleSystems"><i style="padding-right:10px;font-size:20px;" class="fab fa-twitter-square"></i>Twitter</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.linkedin.com/company/13441976/ "> <i class="fab fa-linkedin" style="padding-right:10px;font-size:20px;"></i>LinkedIn</a>
+                        </li>
+                        <li>
+                            <a  target="_blank" href="https://medium.com/giscle "> <i style="padding-right:10px;font-size:20px;" class="fab fa-medium"></i> Medium</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.youtube.com/channel/UC3m-42VgGhRpo8RpqxlURhQ/videos?view_as=subscriber "> <i style="padding-right:10px;font-size:20px;" class="fab fa-youtube"></i> Youtube</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://github.com/Giscle"> <i style="padding-right:10px;font-size:20px;" class="fab fa-github"></i> Github</a>
+                        </li>
+                    </ul>
                 </div>
                 <!--/.Third column-->
                 <!-- <hr class="w-100 clearfix d-sm-none"> -->
@@ -521,11 +636,11 @@
         <!--/.Copyright-->
 
     </footer>
-        
 
-        <hr>
-      </footer>
-      
+
+    <hr>
+    </footer>
+
     <!--/.Footer-->
 
 
