@@ -1,5 +1,7 @@
 from flask import Flask, request, session, redirect, url_for, render_template, flash, send_from_directory
 from .models import User
+from flask import Flask, request, session, redirect, url_for, render_template, flash, send_from_directory
+from .models import User
 from .models import entries
 import os
 from flask_basicauth import BasicAuth
@@ -57,7 +59,7 @@ def login():
         else:
             flash("SUCCESSFULLY LOGGED IN")
             session["username"] = user.username
-            return redirect(url_for("home"))
+            return redirect(url_for("internships"))
     return render_template("login.html")
 
 @app.route("/apply", methods=["POST"])
@@ -72,6 +74,7 @@ def apply():
         flash("Include title, skills and an answer")
     else:
         user.apply(title, skills, ques)
+        flash("SUCCESSFULLY APPLIED FOR JOB ROLE")
     
     return redirect(url_for("internships"))
 
